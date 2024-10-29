@@ -1,21 +1,24 @@
+/* AboutUs css */
 .about-us-container {
-  width: 1000px;
-  /* margin: 0 auto; */
-  /* padding: 20px; */
-  /* background-color: red; */
-  text-align: justify;
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: justify; 
+  box-sizing: border-box; 
+  overflow: hidden;
 }
 
 .about-us-heading {
   font-size: 32px;
   font-weight: bold;
-  color: #333;
+  color: white;
   margin-bottom: 20px;
 }
 
 .about-us-description {
   font-size: 18px;
-  color: #666;
+  color: white;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -28,6 +31,20 @@
   text-align: right;
 }
 
-.plant_logo_left{
+.plant_logo_left {
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 10px; /* Increase padding slightly for comfort */
+  }
+  .about-us-heading {
+    font-size: 28px; /* Slightly smaller font */
+  }
+  .about-us-description,
+  .about-us-content {
+    font-size: 16px; /* Slightly smaller font for readability */
+  }
+}
+
