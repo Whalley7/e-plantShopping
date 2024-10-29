@@ -3,16 +3,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow:hidden;
 }
 
+/* Landing Page */
 .landing-page {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; /* Ensure it takes up the full viewport height */
   background-color: #f8f8f8;
 }
 
+/* Background Image */
 .background-image {
   position: absolute;
   top: 0;
@@ -23,38 +25,37 @@
   background-size: 100% 100%;
   background-position: center;
   filter: brightness(0.8);
+  z-index: 1;
 }
+
+/* Content Area */
 .content {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
- top: 100px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
-  background-color: rgba(0,0,0,0.5);
-  gap: 20px;
+  gap: 0px; /* Set initial gap to 0 */
+  position: relative;
+  z-index: 2;
 }
 
+/* Landing Content */
 .landing_content {
- margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
+  flex: 0 0 33.33%; /* Set flex-basis to 33.33% for one-third width */
+  max-width: 33.33%; /* Set maximum width to 33.33% */
   z-index: 1;
-  text-align: center;
-  /* background-color: red; */
-  width: 400px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-
-.content p,
-.content h1 {
+  padding: 20px;
   color: white;
+  text-align: center;
+  margin: 0;
+  align-content:center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .content h1 {
@@ -66,13 +67,31 @@
   font-size: 25px;
 }
 
+/* About Us Container */
+.aboutus_container {
+  flex: 1 1 66.66%; /* Set flex-basis to 66.66% for two-thirds width */
+  max-width: 66.66%; /* Set maximum width to 66.66% */
+  padding: 20px;
+  color: white;
+  margin: 0;
+}
+
+/* Divider */
 .divider {
   width: 50px;
   height: 2px;
   background-color: #4caf50;
-  margin: 10px 0;
+  margin: 10px auto; /* Center horizontally */
+  display: block; /* Ensure it's a block-level element */
 }
 
+/* Paragraph Spacing */
+.landing_content p,
+.aboutus_container p {
+  margin-bottom: 15px; /* Add a gap between paragraphs */
+}
+
+/* Get Started Button */
 .get-started-button {
   padding: 15px 25px;
   font-size: 23px;
@@ -89,13 +108,11 @@
   background-color: #45a049;
 }
 
-/* ProductList.css */
-
+/* Product List Container */
 .product-list-container {
   position: absolute;
   overflow-x: hidden;
   top: 100vh;
-  /* Initially off-screen */
   left: 0;
   width: 100%;
   height: 100vh;
@@ -113,35 +130,90 @@
 .product-list-container.visible {
   top: 0;
 }
-/* LandingPage.css */
-@media screen and (max-width: 768px) {
+
+/* Larger width screens */
+@media (max-width: 1024px) {
+
+  .landing_content h1,
+  .aboutus_container h2 {
+    font-size: 1rem; /* Adjust font size for better readability */
+    margin-top: 20px; /* Lower the title by adding margin on top */
+  }
+
+  .landing_content p,
+  .aboutus_container p {
+    font-size: 0.9rem; /* Adjust text size */
+    margin-bottom: 10px; /* Ensure spacing remains in smaller screens */
+  }
+}
+
+/* Tablet and Small Screens */
+@media (max-width: 768px) {
   .content {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items in the column */
     width: 100vw;
     height: 100vh;
   }
 
-  .landing_content {
-    margin-top: 100px; /* Adjust as needed */
-    margin-left: 0;
-    width: 80%; /* Adjust as needed */
-    text-align: center;
+  .landing_content,
+  .aboutus_container {
+    max-width: 100%; /* Allow full width usage on small screens */
+    padding: 15px; /* Reduce padding to fit smaller screens */
+    margin-bottom: 15px; /* Adjust space between sections */
+    gap: 10px;
   }
 
-  .aboutus_container {
-    margin-top: 20px; /* Adjust as needed */
-    width: 80%; /* Adjust as needed */
+  .landing_content h1,
+  .aboutus_container h2 {
+    font-size: 1.125rem; /* Adjust font size for better readability */
+    margin-top: 20px; /* Lower the title by adding margin on top */
+  }
+
+  .landing_content p,
+  .aboutus_container p {
+    font-size: 1rem; /* Adjust text size */
+    margin-bottom: 10px; /* Ensure spacing remains in smaller screens */
+  }
+
+  .divider {
+    width: 50px; /* Keep the width consistent */
+    height: 2px; /* Keep the height consistent */
+    margin: 10px auto; /* Use auto margin to center on small screens */
+    background-color: #4caf50; /* Ensure the divider color is visible */
+    display: block; /* Ensure the divider is visible */
   }
 }
 
-@media screen and (max-width: 480px) {
-  .landing_content {
-    margin-top: 50px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .content {
+    padding: 10px; /* Further reduce padding */
   }
 
+  .landing_content,
   .aboutus_container {
-    width: 90%; /* Adjust as needed */
+    padding: 10px; /* Further reduce padding */
+    margin-bottom: 10px; /* Reduce space between sections */
+  }
+
+  .landing_content h1,
+  .aboutus_container h2 {
+    font-size: 1rem; /* Further reduce font size */
+    margin-top: 30px; /* Lower the title even further for very small screens */
+  }
+
+  .landing_content p,
+  .aboutus_container p {
+    font-size: 0.9rem; /* Further adjust text size */
+    margin-bottom: 8px; /* Ensure spacing remains in smaller screens */
+  }
+  
+  .divider {
+    width: 50px; /* Keep the width consistent */
+    height: 2px; /* Keep the height consistent */
+    margin: 8px auto; /* Use auto margin to center on very small screens */
+    background-color: #4caf50; /* Ensure the divider color is visible */
+    display: block; /* Ensure the divider is visible */
   }
 }
