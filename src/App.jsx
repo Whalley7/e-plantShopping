@@ -3,7 +3,6 @@ import ProductList from "./ProductList";
 import "./App.css";
 import AboutUs from "./AboutUs";
 
-
 function App() {
   const [showProductList, setShowProductList] = useState(false);
   const handleGetStartedClick = () => {
@@ -12,7 +11,7 @@ function App() {
 
   const handleReturnClick = () => {
     setShowProductList(false);
-  }
+  };
 
   return (
     <div className="app-container">
@@ -36,7 +35,8 @@ function App() {
         </div>
       </div>
       <div
-        className={`product-list-container ${showProductList ? 'visible' : ''}`}>
+        className={`product-list-container ${showProductList ? "visible" : ""}`}
+      >
         <ProductList LandingPage={handleReturnClick} />
       </div>
     </div>
