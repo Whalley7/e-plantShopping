@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import './ProductList.css';
-import CartItem from './CartItem';
-import { addItem } from './CartSlice';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import "./ProductList.css";
+import CartItem from "./CartItem";
+import { addItem } from "./CartSlice";
+import PropTypes from "prop-types";
 
 const ProductList = ({ LandingPage }) => {
   const dispatch = useDispatch();
   const [showCart, setShowCart] = useState(false);
-  const cartItems = useSelector(state => state.cart.items);
+  const cartItems = useSelector((state) => state.cart.items);
   const [addedToCart, setAddedToCart] = useState({});
-  
+
   // Sample style objects
   const styleObj = {
     backgroundColor: "#4CAF50",
@@ -42,7 +42,7 @@ const ProductList = ({ LandingPage }) => {
 
   const handleAddToCart = (product) => {
     dispatch(addItem(product));
-    setAddedToCart(prevState => ({
+    setAddedToCart((prevState) => ({
       ...prevState,
       [product.name]: true,
     }));
@@ -295,15 +295,14 @@ const ProductList = ({ LandingPage }) => {
     },
   ];
 
-
   useEffect(() => {
     const unitAddedToCart = {};
-    cartItems.forEach(item => {
+    cartItems.forEach((item) => {
       unitAddedToCart[item.name] = true;
     });
     setAddedToCart(unitAddedToCart);
   }, [cartItems]);
-  
+
   return (
     <div>
       <div className="navbar" style={styleObj}>
@@ -362,7 +361,6 @@ const ProductList = ({ LandingPage }) => {
       {!showCart ? (
         <div className="product-grid">
           {plantsArray.map((product) => {
-
             return (
               <div key={product.category} className="product-grid-item">
                 <h2 className="product-list-title">{product.category}</h2>
@@ -408,7 +406,7 @@ const ProductList = ({ LandingPage }) => {
       )}
     </div>
   );
-}
+};
 
 // Define prop types
 ProductList.propTypes = {

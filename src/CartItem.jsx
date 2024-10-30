@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem, updateQuantity } from "./CartSlice";
 import "./CartItem.css";
@@ -93,10 +93,7 @@ const CartItem = ({ onContinueShopping, setAddedToCart }) => {
         ))}
       </div>
       <div className="continue_shopping_btn">
-        <button
-          className="get-started-button"
-          onClick={handleContinueShopping}
-        >
+        <button className="get-started-button" onClick={handleContinueShopping}>
           Continue Shopping
         </button>
         <br />

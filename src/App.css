@@ -6,12 +6,13 @@
   overflow: hidden;
 }
 
-/* Landing Page */
-.landing-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh; /* Ensure it takes up the full viewport height */
-  background-color: #f8f8f8;
+/* About Us Container */
+.aboutus_container {
+  flex: 1 1 66.66%;
+  max-width: 66.66%; 
+  padding: 20px;
+  color: white;
+  margin: 0;
 }
 
 /* Background Image */
@@ -39,23 +40,9 @@
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
-  gap: 0px; /* Set initial gap to 0 */
+  gap: 0px; 
   position: relative;
   z-index: 2;
-}
-
-/* Landing Content */
-.landing_content {
-  flex: 0 0 33.33%; /* Set flex-basis to 33.33% for one-third width */
-  max-width: 33.33%; /* Set maximum width to 33.33% */
-  z-index: 1;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  margin: 0;
-  align-content: center;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .content h1 {
@@ -67,28 +54,13 @@
   font-size: 25px;
 }
 
-/* About Us Container */
-.aboutus_container {
-  flex: 1 1 66.66%; /* Set flex-basis to 66.66% for two-thirds width */
-  max-width: 66.66%; /* Set maximum width to 66.66% */
-  padding: 20px;
-  color: white;
-  margin: 0;
-}
-
 /* Divider */
 .divider {
   width: 50px;
   height: 2px;
   background-color: #4caf50;
-  margin: 10px auto; /* Center horizontally */
-  display: block; /* Ensure it's a block-level element */
-}
-
-/* Paragraph Spacing */
-.landing_content p,
-.aboutus_container p {
-  margin-bottom: 15px; /* Add a gap between paragraphs */
+  margin: 10px auto; 
+  display: block; 
 }
 
 /* Get Started Button */
@@ -105,7 +77,35 @@
 }
 
 .get-started-button:hover {
-  background-color: #45a049;
+  background-color:#4caf50;
+}
+
+/* Landing Content */
+.landing_content {
+  flex: 0 0 33.33%; 
+  max-width: 33.33%; 
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  align-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Paragraph Spacing */
+.landing_content p,
+.aboutus_container p {
+  margin-bottom: 15px; 
+}
+
+/* Landing Page */
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh; 
+  background-color: #f8f8f8;
 }
 
 .product-list-container {
@@ -116,13 +116,9 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
-  /* Adjust background opacity as needed */
   transition: top 0.5s ease;
-  /* Smooth transition for top property */
   overflow-y: auto;
-  /* Enable vertical scrolling */
   z-index: 2;
-  /* Ensure it's above landing page content */
   backdrop-filter: blur(5px);
 }
 
@@ -134,84 +130,83 @@
 @media (max-width: 1024px) {
   .landing_content h1,
   .aboutus_container h2 {
-    font-size: 1rem; /* Adjust font size for better readability */
-    margin-top: 20px; /* Lower the title by adding margin on top */
+    font-size: 1rem; 
+    margin-top: 20px; 
   }
 
   .landing_content p,
   .aboutus_container p {
-    font-size: 0.9rem; /* Adjust text size */
-    margin-bottom: 10px; /* Ensure spacing remains in smaller screens */
+    font-size: 0.9rem; 
+    margin-bottom: 10px; 
   }
 }
 
 /* Tablet and Small Screens */
 @media (max-width: 768px) {
+  .divider {
+    width: 50px; 
+    height: 2px; 
+    margin: 10px auto; 
+    background-color: #4caf50; 
+    display: block; 
+  }
   .content {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: center; /* Center items in the column */
+    flex-direction: column; 
+    align-items: center; 
     width: 100vw;
     height: 100vh;
   }
 
   .landing_content,
   .aboutus_container {
-    max-width: 100%; /* Allow full width usage on small screens */
-    padding: 15px; /* Reduce padding to fit smaller screens */
-    margin-bottom: 15px; /* Adjust space between sections */
+    max-width: 100%; 
+    padding: 15px; 
+    margin-bottom: 15px; 
     gap: 10px;
   }
 
   .landing_content h1,
   .aboutus_container h2 {
-    font-size: 1.125rem; /* Adjust font size for better readability */
-    margin-top: 20px; /* Lower the title by adding margin on top */
+    font-size: 1.125rem; 
+    margin-top: 20px; 
   }
 
   .landing_content p,
   .aboutus_container p {
-    font-size: 1rem; /* Adjust text size */
-    margin-bottom: 10px; /* Ensure spacing remains in smaller screens */
-  }
-
-  .divider {
-    width: 50px; /* Keep the width consistent */
-    height: 2px; /* Keep the height consistent */
-    margin: 10px auto; /* Use auto margin to center on small screens */
-    background-color: #4caf50; /* Ensure the divider color is visible */
-    display: block; /* Ensure the divider is visible */
+    font-size: 1rem; 
+    margin-bottom: 10px; 
   }
 }
 
 /* Very Small Screens */
 @media (max-width: 480px) {
   .content {
-    padding: 10px; /* Further reduce padding */
+    padding: 10px; 
+  }
+
+  .divider {
+    width: 50px; 
+    height: 2px; 
+    margin: 8px auto; 
+    background-color: #4caf50; 
+    display: block; 
   }
 
   .landing_content,
   .aboutus_container {
-    padding: 10px; /* Further reduce padding */
-    margin-bottom: 10px; /* Reduce space between sections */
+    padding: 10px; 
+    margin-bottom: 10px; 
   }
 
   .landing_content h1,
   .aboutus_container h2 {
-    font-size: 1rem; /* Further reduce font size */
-    margin-top: 30px; /* Lower the title even further for very small screens */
+    font-size: 1rem; 
+    margin-top: 30px; 
   }
 
   .landing_content p,
   .aboutus_container p {
-    font-size: 0.9rem; /* Further adjust text size */
-    margin-bottom: 8px; /* Ensure spacing remains in smaller screens */
-  }
-
-  .divider {
-    width: 50px; /* Keep the width consistent */
-    height: 2px; /* Keep the height consistent */
-    margin: 8px auto; /* Use auto margin to center on very small screens */
-    background-color: #4caf50; /* Ensure the divider color is visible */
-    display: block; /* Ensure the divider is visible */
+    font-size: 0.9rem; 
+    margin-bottom: 8px; 
   }
 }
