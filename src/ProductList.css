@@ -108,20 +108,8 @@ ol {
 }
 
 /* For smaller screens */
-@media (max-width: 768px) {
-  .product-grid .product-list-title {
-    font-size: 1.5rem; /* Smaller font size */
-    text-align: center; /* Center the title */
-    width: 80%; /* Adjust width to fit the screen */
-    margin: 20px auto; /* Center the element with margin auto */
-  }
 
-  /* Adjust the h2 styling within small screens */
-  .product-grid h2 {
-    font-size: 1rem; /* Reduce the h2 size for smaller screens */
-    margin: 20px auto; /* Center with reduced margin */
-  }
-}
+ 
 
 .product-list-title,
 h2 {
@@ -224,7 +212,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 5px 10px;
+  padding: 2.5px 5px;
   border-radius: 0 0 0 5px;
 }
 
@@ -300,6 +288,19 @@ h2 {
 @media (max-width: 768px) {
   .product-list {
     gap: 20px;
+  }
+
+  .product-grid .product-list-title {
+    font-size: 1.5rem; /* Smaller font size */
+    text-align: center; /* Center the title */
+    width: 80%; /* Adjust width to fit the screen */
+    margin: 20px auto; /* Center the element with margin auto */
+  }
+
+  /* Adjust the h2 styling within small screens */
+  .product-grid h2 {
+    font-size: 1rem; /* Reduce the h2 size for smaller screens */
+    margin: 20px auto; /* Center with reduced margin */
   }
 
   /* Center the product list title and reduce font size */
