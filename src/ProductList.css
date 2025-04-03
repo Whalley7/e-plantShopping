@@ -259,7 +259,7 @@ ul,
 ol {
   list-style-type: none;
 }
-}
+
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 412px) {
       h2 {
