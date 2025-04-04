@@ -111,7 +111,7 @@ h2 {
 }
 
 .product-button.added-to-cart {
-  background-color: grey; /
+  background-color: grey; 
 }
 
 /* Product Card */
@@ -317,7 +317,7 @@ ol {
 
   .ul {
     display: flex; 
-    flex-direction: column; / 
+    flex-direction: column; 
   }
 
   .ul div {
