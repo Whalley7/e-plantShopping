@@ -221,7 +221,6 @@ body {
 @media (max-width: 1200px) {
   .product-card {
     flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
-    max-width: calc(33.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap on medium screens */
   }
 }
 
