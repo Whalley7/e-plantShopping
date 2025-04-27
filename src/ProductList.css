@@ -231,20 +231,10 @@ body {
   }
 }
 
+/* Very Small Screens: 1 Card */
 @media (max-width: 480px) {
   .product-card {
     flex: 1 1 100%;
     max-width: 100%;
   }
-
-  .product-list {
-    gap: 20px; /* Smaller gap on very small screens */
-  }
-
-  .plant_heading {
-    margin: 10px auto;
-    width: 90%;
-    font-size: 20px;
-  }
 }
-
