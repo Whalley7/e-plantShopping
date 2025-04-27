@@ -70,7 +70,9 @@ body {
   position: relative;
   gap: 20px;
 }
-
+.product-list-title {
+  text-align: center;
+}
 .product-card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
