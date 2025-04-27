@@ -31,6 +31,7 @@ body {
 .navbar li {
   margin-right: 30px;
 }
+
 .navbar .ul div a {
   color: white;
   font-size: 30px;
@@ -69,9 +70,7 @@ body {
   position: relative;
   gap: 20px;
 }
-.product-list-title {
-  text-align: center;
-}
+
 .product-card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
@@ -127,6 +126,7 @@ body {
   border-radius: 0 0 0 5px;
 }
 
+/* Tag and Branding */
 .tag_home_link {
   display: flex;
   flex-direction: column;
@@ -167,6 +167,7 @@ body {
   font-size: 19px;
 }
 
+/* Cart */
 .cart {
   color: white;
   display: flex;
@@ -179,7 +180,9 @@ body {
   font-size: 29px;
 }
 
+/* Product List Title - Centered */
 .plantname_heading {
+  width: 100%; /* Centering fix */
   display: flex;
   align-items: center;
   justify-content: center;
